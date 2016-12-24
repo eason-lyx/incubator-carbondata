@@ -55,6 +55,7 @@ object CarbonExample {
     CarbonProperties.getInstance()
       .addProperty("carbon.kettle.home", s"$rootPath/processing/carbonplugins")
       .addProperty("carbon.storelocation", storeLocation)
+      .addProperty("enable.query.statistics","true")
 
     spark.sparkContext.setLogLevel("WARN")
 
